@@ -1,30 +1,56 @@
 # Algo-Arena-Ai
-                    ┌───────────────────────┐
-                    │   Algo.Anera.Ai Web   │
-                    │     Next.js + React    │
-                    └───────────┬───────────┘
-                                │
-                                ▼
-                    ┌───────────────────────┐
-                    │       API Layer       │
-                    │      /api/v1/*        │
-                    │      NestJS            │
-                    └───────┬───────┬───────┘
-                            │       │
-                 ┌──────────┘       └──────────┐
-                 ▼                             ▼
-          PostgreSQL                         Redis
-          System of Record             Cache / Queue / State
-                 │                             │
-                 │                       ┌─────┴─────┐
-                 │                       ▼           ▼
-                 │                  AI Workers   Judge Workers
-                 │                       │           │
-                 │                       ▼           ▼
-                 │                     AI      Secure Sandbox
-                 │
-                 ▼
-             Core Modules
+                                     ┌─────────────────────────────┐
+                    │       Algo-Arena-Ai Web      │
+                    │       Next.js + React         │
+                    │       TypeScript              │
+                    │       App Router              │
+                    │       Tailwind CSS             │
+                    └──────────────┬──────────────┘
+                                   │
+                                   ▼
+                    ┌─────────────────────────────┐
+                    │          App Shell           │
+                    │                              │
+                    │ Sidebar │ Header │ Content    │
+                    └──────────────┬──────────────┘
+                                   │
+                     ┌─────────────┴─────────────┐
+                     │                           │
+                     ▼                           ▼
+              UI Components               Feature Screens
+                     │                           │
+       ┌─────────────┴──────────┐       ┌───────┴────────┐
+       │                        │       │                │
+    Button                    Card   Problems          AI
+    Input                     Modal  Contests        Dashboard
+    Badge                     Toast  Profile         Skills
+    States                           etc.            etc.
+                     │
+                     ▼
+              API Integration
+                     │
+                     ▼
+              /api/v1/*
+                     │
+                     ▼
+            ┌─────────────────┐
+            │ NestJS API      │
+            └────────┬────────┘
+                     │
+          ┌──────────┴──────────┐
+          ▼                     ▼
+     PostgreSQL                Redis
+     System of Record       Cache/Queue/State
+          │                     │
+          │              ┌──────┴──────┐
+          │              ▼             ▼
+          │         AI Workers    Judge Workers
+          │              │             │
+          │              ▼             ▼
+          │             AI      Secure Sandbox
+          │
+          ▼
+      Core Modules
 
              apps/api/src/modules/
 
@@ -184,6 +210,7 @@ Algo.Anera.Ai Web
 ## today command used in nest/next js
 `cd /workspaces/Algo-Arena-Ai
 ls apps/web`
+
 `npm exec --yes create-next-app@latest apps/web`
 
 
@@ -209,3 +236,5 @@ AI screens ke component requirements
 
 P4
 responsive + accessibility + UI testing
+# run command
+`pnpm --filter web dev`

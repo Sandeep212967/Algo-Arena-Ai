@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Environment
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Next.js
+.next/
+out/
+
+# Build
+dist/
+build/
+coverage/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+.idea/
+
+# Temporary
+.tmp/
+temp/
+
+# Testing
+playwright-report/
+test-results/
+
+# Docker
+*.pid
+
+# Misc
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.*
+!.env.example

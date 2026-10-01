@@ -1,0 +1,20 @@
+{
+  "name": "algo-anera-ai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Algo.Anera.Ai - AI-powered competitive programming, learning, assessment and placement platform",
+  "packageManager": "pnpm@10",
+  "scripts": {
+    "dev": "pnpm --parallel --filter './apps/*' dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "clean": "pnpm -r clean"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  }
+}

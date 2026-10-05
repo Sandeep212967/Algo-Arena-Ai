@@ -1,10 +1,10 @@
 # Algo-Arena-Ai
-                                     ┌─────────────────────────────┐
-                    │       Algo-Arena-Ai Web      │
-                    │       Next.js + React         │
-                    │       TypeScript              │
-                    │       App Router              │
-                    │       Tailwind CSS             │
+                    ┌─────────────────────────────┐
+                    │       Algo-Arena-Ai Web     │
+                    │       Next.js + React       │
+                    │       TypeScript            │
+                    │       App Router            │
+                    │       Tailwind CSS          │
                     └──────────────┬──────────────┘
                                    │
                                    ▼
